@@ -3,7 +3,7 @@ import { Forbidden } from '../utils/Errors'
 
 class CommentsService {
   async getAllComments(query) {
-    const comment = dbContext.Comments.find(query).populate('creator', 'name picture')
+    const comment = dbContext.Comments.find(query)
     return comment
   }
 
